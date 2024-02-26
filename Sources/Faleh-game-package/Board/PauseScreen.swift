@@ -22,7 +22,7 @@ struct PauseScreen: View {
                 Button(action: {
                     onResume()
                 }, label: {
-                    Image("resume_btn", bundle: falehBundle)
+                    Image("resume_btn", bundle: .module)
                 })
                 Spacer()
                 PrimaryButtonWidget(text: "الرئيسية", onClick: {

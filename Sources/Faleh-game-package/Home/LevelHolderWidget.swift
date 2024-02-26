@@ -11,7 +11,7 @@ import SwiftUI
 struct LevelHolderWidget: View {
     let level: String
     var body: some View {
-        Image("level_holder", bundle: falehBundle)
+        Image("level_holder", bundle: .module)
             .resizable()
             .frame(width: UIScreen.screenWidth * 0.20, height: UIScreen.screenWidth * 0.20, alignment: .center)
             .overlay(

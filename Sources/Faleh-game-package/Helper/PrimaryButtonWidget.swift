@@ -20,7 +20,7 @@ struct PrimaryButtonWidget: View {
             SoundManager.shared.play()
         }, label: {
             ZStack {
-                Image("button-container", bundle: falehBundle)
+                Image("button-container", bundle: .module)
                 Text(text)
                     .font(.system(size: UIScreen.screenWidth * 0.09))
                     .fontWeight(.bold)
@@ -42,7 +42,7 @@ struct SoundManager {
     static let shared = SoundManager()
 
     func intit() {
-        let sound =  falehBundle?.path(forResource: "click", ofType: "wav")
+        let sound =  Bundle.module.path(forResource: "click", ofType: "wav")
         audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
         audioPlayer.prepareToPlay()
     }

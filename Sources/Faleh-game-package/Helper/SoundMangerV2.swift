@@ -27,7 +27,7 @@ class SoundManagerV2 {
     }
     
     func play(_ sound: String) {
-        guard let url = falehBundle?.url(forResource: sound, withExtension: "wav") else { return }
+        guard let url = Bundle.module.url(forResource: sound, withExtension: "wav") else { return }
         serialQueue.async {
             do {
                 let player = try AVAudioPlayer(contentsOf: url)

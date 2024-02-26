@@ -31,7 +31,7 @@ struct HomeScreen: View {
                     Button(action: {
                         pilot.pop()
                     }, label: {
-                        Image("back_btn", bundle: falehBundle)
+                        Image("back_btn", bundle: .module)
                     }).padding()
 
                     Spacer()
@@ -52,7 +52,7 @@ struct HomeScreen: View {
                     }
                     .padding(.horizontal)
                 HStack {
-                    Image("title", bundle: falehBundle)
+                    Image("title", bundle: .module)
                         .resizable()
                         .frame(width: UIScreen.screenWidth * 0.8, height: UIScreen.screenWidth * 0.25)
                 }.scaleEffect(scales[2])
@@ -78,7 +78,7 @@ struct HomeScreen: View {
                 }
                 Button(action: { openURL(URL(string: "https://twitter.com/98sStudio")!)
                 }, label: {
-                    Image("powered_by", bundle: falehBundle).padding(.top)
+                    Image("powered_by", bundle: .module).padding(.top)
                 }).padding(.bottom, 40)
             }
         }.navigationBarHidden(true).navigationBarTitle("")
@@ -90,4 +90,4 @@ struct HomeScreen: View {
 }
 
 
-let falehBundle = Bundle(identifier: "Faleh_game_package")
+//let falehBundle = Bundle(identifier: "Faleh_game_package")

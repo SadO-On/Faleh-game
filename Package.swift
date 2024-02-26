@@ -24,11 +24,13 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "Faleh-game-package",
+   
         dependencies: [
             .target(name: "Shared"),
             .product(name: "Lottie", package: "lottie-spm"),
             .byName(name: "UIPilot")
-        ]
+        ],
+            resources: [.process("Assets.xcassets"), .process("Sound"), .process("Lottie")]
         ),
         
         .binaryTarget(name: "Shared", path: "./Sources/shared.xcframework")

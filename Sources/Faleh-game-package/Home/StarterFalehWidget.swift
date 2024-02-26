@@ -12,7 +12,7 @@ struct StarterFalehWidget: View {
     @State var Robot: String = "startFrame1"
 
     var body: some View {
-        Image(Robot, bundle: falehBundle)
+        Image(Robot, bundle: .module)
             .resizable()
             .frame(width: 300, height: 200, alignment: .center)
             .onAppear(perform: timerRobot)

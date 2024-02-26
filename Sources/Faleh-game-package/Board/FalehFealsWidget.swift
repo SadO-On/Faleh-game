@@ -38,7 +38,7 @@ struct FelahFeelWidget: View {
     let timer = Timer.publish(every: 0.04, on: .main, in: .common).autoconnect()
 
     var body: some View {
-        Image(state, bundle: falehBundle)
+        Image(state, bundle: .module)
             .resizable()
             .scaledToFit()
             .frame(width: UIScreen.screenWidth * 0.5,height: UIScreen.screenWidth * 0.3, alignment: .bottom)

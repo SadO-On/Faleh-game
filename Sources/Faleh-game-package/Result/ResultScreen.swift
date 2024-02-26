@@ -77,7 +77,7 @@ struct ResultScreen: View {
                         showShareSheet = true
 
                     }, label: {
-                        Image("share", bundle: falehBundle)
+                        Image("share", bundle: .module)
                     }).hide(if: starsCount < 2)
                         .scaleEffect(scales[5])
                         .onChange(of: isShow, perform: { _ in
@@ -103,7 +103,7 @@ struct ResultScreen: View {
                 Button(action: {
                     pilot.popTo(.Home)
                 }, label: {
-                    Image("back_btn", bundle: falehBundle)
+                    Image("back_btn", bundle: .module)
                 }).padding()
                     .scaleEffect(scales[0])
                     .onChange(of: isShow, perform: { _ in
@@ -113,7 +113,7 @@ struct ResultScreen: View {
                     })
 
             }
-            .imageShareSheet(isPresented: $showShareSheet, image: UIImage(named: starsCount == 3 ? "share-3" : "share-2", in: falehBundle!, with: nil)!)
+            .imageShareSheet(isPresented: $showShareSheet, image: UIImage(named: starsCount == 3 ? "share-3" : "share-2", in: .module, with: nil)!)
         }
     }
 }

@@ -40,7 +40,7 @@ struct BoardScreen: View {
                         viewModel.onEevent(event: BoardEvents.OnPause())
                         SoundManager.shared.play()
                     }, label: {
-                        Image("pause_btn", bundle: falehBundle)
+                        Image("pause_btn", bundle: .module)
                     })
                 }
                 Spacer()
