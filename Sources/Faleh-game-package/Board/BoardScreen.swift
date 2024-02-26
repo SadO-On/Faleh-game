@@ -46,25 +46,26 @@ struct BoardScreen: View {
                     })
                 }
                 Spacer()
-                GeometryReader { geometry in
-                    VStack {
-                        LazyVGrid(columns: fourColumnGrid, spacing: 20) {
-                            ForEach(0 ..< viewModel.state.grid.count, id: \.self) { row in
-                                ForEach(0 ..< viewModel.state.grid[row].count, id: \.self) { col in
-                                    LetterTileView(letter: viewModel.state.grid[row][col], colNumber: col).id(row * 100 + col)
-                                }
+             
+                VStack(alignment: .leading, spacing:  UIScreen.screenWidth * 0.06) {
+                    ForEach(0 ..< viewModel.state.grid.count, id: \.self) { row in
+                        HStack(spacing:  UIScreen.screenWidth * 0.06) {
+                            ForEach(0 ..< viewModel.state.grid[row].count, id: \.self) { col in
+                                LetterTileView(letter: viewModel.state.grid[row][col], colNumber: col).id(row * 100 + col)
                             }
+                            
+                        }
+                    }
                         }
                         .gesture(DragGesture(minimumDistance: 0)
                             .onChanged { value in
                                 let touchLocation = value.location
-                                determineSwipingPosition(touchLocation: touchLocation, geometry: geometry)
+                                determineSwipingPosition(touchLocation: touchLocation)
                             }.onEnded { _ in
                                 viewModel.onEevent(event: BoardEvents.UserSwiped())
                             })
-                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .padding(.bottom, -40)
-                }
+                    
+             
 
                 ZStack (alignment: .bottom){
                     FalehFealsState(falehFeel: viewModel.state.falehFeel)
@@ -105,18 +106,20 @@ struct BoardScreen: View {
             })
     }
 
-    func determineSwipingPosition(touchLocation: CGPoint, geometry: GeometryProxy) {
+    func determineSwipingPosition(touchLocation: CGPoint) {
         let gridSize = viewModel.state.grid.count
 
         guard gridSize > 0 else {
             return
         }
-        let verticalSpacing: CGFloat = geometry.size.width * 0.04
-        let horizontalSpacing: CGFloat = geometry.size.width * 0.08
-        let screenWidth = geometry.size.width
+        let screenWidth = UIScreen.screenWidth
 
-        let tileWidth = screenWidth / CGFloat(gridSize)
-        let tileHeight = screenWidth / CGFloat(gridSize)
+        
+        let verticalSpacing: CGFloat = screenWidth * 0.06
+        let horizontalSpacing: CGFloat = screenWidth * 0.06
+
+        let tileWidth = screenWidth * 0.18
+        let tileHeight = screenWidth * 0.18
 
         let row = max(0, min(Int((touchLocation.y + verticalSpacing) / (tileHeight + verticalSpacing)), gridSize - 1))
         let column = max(0, min(Int((touchLocation.x + horizontalSpacing) / (tileWidth + horizontalSpacing)), gridSize - 1))
@@ -129,5 +132,5 @@ struct BoardScreen: View {
 }
 
 #Preview {
-    BoardScreen(isFirstTime: true)
+    BoardScreen(isFirstTime: false)
 }

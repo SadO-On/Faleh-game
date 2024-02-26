@@ -16,11 +16,11 @@ struct HomeScreen: View {
     @Environment(\.openURL) var openURL
 
     @State private var scales: [CGFloat]
-    
-    let onBackClicked: ()-> Void
-    
-    init(onBackClicked: @escaping ()->Void) {
-      viewModel = IOSHomeViewModel()
+
+    let onBackClicked: () -> Void
+
+    init(onBackClicked: @escaping () -> Void) {
+        viewModel = IOSHomeViewModel()
         _scales = State(initialValue: Array(repeating: 0, count: 4))
         self.onBackClicked = onBackClicked
     }
@@ -28,7 +28,7 @@ struct HomeScreen: View {
     var body: some View {
         ZStack {
             Faleh_game_package.background.ignoresSafeArea(.all)
-            
+
             VStack {
                 HStack(alignment: .top) {
                     Button(action: {
@@ -44,7 +44,7 @@ struct HomeScreen: View {
                             scales[0] = 1
                         }
                     }
-                    
+
                 LevelComponentWidget(level: String(viewModel.state.userLevel.level),
                                      percent: viewModel.state.userLevel.xp)
                     .scaleEffect(scales[1])
@@ -66,11 +66,12 @@ struct HomeScreen: View {
                     }
                 StarterFalehWidget()
                 Spacer()
-
                 PrimaryButtonWidget(text: "العب", onClick: {
-                    pilot.push(.Board(isFirstTime: viewModel.state.userLevel.isFirstTime))
                     if viewModel.state.userLevel.isFirstTime {
                         viewModel.onEevent(event: HomeEvents.DisableTutorial())
+                        pilot.push(.Board(isFirstTime: true))
+                    } else {
+                        pilot.push(.Board(isFirstTime: false))
                     }
                 })
                 .scaleEffect(scales[3])
@@ -93,5 +94,3 @@ struct HomeScreen: View {
 #Preview {
     HomeScreen(onBackClicked: {})
 }
-
-
