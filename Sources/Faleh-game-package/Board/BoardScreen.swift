@@ -87,8 +87,6 @@ struct BoardScreen: View {
                 TutorialScreen(onDone: {
                     isFirstTime = false
                     viewModel.onEevent(event: BoardEvents.OnResume())
-                }).onAppear(perform: {
-                    viewModel.onEevent(event: BoardEvents.OnPause())
                 })
             }
         }.navigationBarHidden(true)
@@ -96,6 +94,9 @@ struct BoardScreen: View {
             .onAppear {
                 self.viewModel.startObserving()
                 self.viewModel.onEevent(event: BoardEvents.GameStarted())
+                if isFirstTime  {
+                    viewModel.onEevent(event: BoardEvents.OnPause())
+                }
             }.onDisappear {
                 self.viewModel.onEevent(event: BoardEvents.OnCanel())
                 self.viewModel.dipose()
@@ -132,5 +133,5 @@ struct BoardScreen: View {
 }
 
 #Preview {
-    BoardScreen(isFirstTime: false)
+    BoardScreen(isFirstTime: true)
 }
