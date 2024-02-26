@@ -77,6 +77,7 @@ struct HomeScreen: View {
                 .scaleEffect(scales[3])
                 .onAppear {
                     self.viewModel.startObserving()
+                    self.viewModel.onEevent(event: HomeEvents.GetLevel())
                     // Animate to full size with a spring effect
                     withAnimation(.spring(response: 0.5, dampingFraction: 0.5, blendDuration: 0).delay(0.4)) {
                         scales[3] = 1 // Animate to full size
