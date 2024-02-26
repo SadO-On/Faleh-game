@@ -42,7 +42,7 @@ struct SoundManager {
     static let shared = SoundManager()
 
     func intit() {
-        let sound =  Bundle(identifier: "studio.98s.faleh")?.path(forResource: "click", ofType: "wav")
+        let sound =  falehBundle?.path(forResource: "click", ofType: "wav")
         audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
         audioPlayer.prepareToPlay()
     }
