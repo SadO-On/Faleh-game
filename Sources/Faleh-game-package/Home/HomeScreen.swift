@@ -20,8 +20,8 @@ struct HomeScreen: View {
     let onBackClicked: ()-> Void
     
     init(onBackClicked: @escaping ()->Void) {
+      viewModel = IOSHomeViewModel()
         _scales = State(initialValue: Array(repeating: 0, count: 4))
-        viewModel = IOSHomeViewModel()
         self.onBackClicked = onBackClicked
     }
 
@@ -68,7 +68,7 @@ struct HomeScreen: View {
                 Spacer()
 
                 PrimaryButtonWidget(text: "العب", onClick: {
-                    pilot.push(.Board(isFirstTime: true))
+                    pilot.push(.Board(isFirstTime: viewModel.state.userLevel.isFirstTime))
                     if viewModel.state.userLevel.isFirstTime {
                         viewModel.onEevent(event: HomeEvents.DisableTutorial())
                     }
@@ -76,7 +76,6 @@ struct HomeScreen: View {
                 .scaleEffect(scales[3])
                 .onAppear {
                     self.viewModel.startObserving()
-                    self.viewModel.onEevent(event: HomeEvents.GetLevel())
                     // Animate to full size with a spring effect
                     withAnimation(.spring(response: 0.5, dampingFraction: 0.5, blendDuration: 0).delay(0.4)) {
                         scales[3] = 1 // Animate to full size
