@@ -90,4 +90,4 @@ struct HomeScreen: View {
 }
 
 
-let falehBundle = Bundle(identifier: "Faleh-game-package")
+let falehBundle = Bundle(identifier: "Faleh_game_package")
