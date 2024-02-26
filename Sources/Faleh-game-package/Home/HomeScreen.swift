@@ -68,7 +68,10 @@ struct HomeScreen: View {
                 Spacer()
 
                 PrimaryButtonWidget(text: "العب", onClick: {
-                    pilot.push(.Board)
+                    pilot.push(.Board(isFirstTime: true))
+                    if viewModel.state.userLevel.isFirstTime {
+                        viewModel.onEevent(event: HomeEvents.DisableTutorial())
+                    }
                 })
                 .scaleEffect(scales[3])
                 .onAppear {
@@ -93,4 +96,3 @@ struct HomeScreen: View {
 }
 
 
-//let falehBundle = Bundle(identifier: "Faleh_game_package")

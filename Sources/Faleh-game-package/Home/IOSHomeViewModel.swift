@@ -13,7 +13,7 @@ extension HomeScreen {
     @MainActor class IOSHomeViewModel: ObservableObject {
         private let viewModel: HomeViewModel
 
-        @Published var state = HomeState(id: "", userLevel: UserLevel(level: 1, xp: 0))
+        @Published var state = HomeState(id: "", userLevel: UserLevel(level: 1, xp: 0,isFirstTime: true))
 
         private var handle: DisposableHandle?
 

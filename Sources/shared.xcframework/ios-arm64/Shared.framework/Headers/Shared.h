@@ -6,7 +6,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class SharedWordLocal, SharedWord, SharedUserLevelLocalCompanion, SharedKbsonBsonObjectId, SharedUserLevelMapper, SharedUserLevel, SharedUserLevelLocal, SharedWordMapper, SharedKotlinx_coroutines_coreCoroutineDispatcher, SharedCommonFlow<T>, SharedCommonStateFlow<T>, SharedCommonMutableStateFlow<T>, SharedKotlinMPPLogger, SharedLetter, SharedBoardEvents, SharedBoardEventsGameStarted, SharedBoardEventsLetterSwiped, SharedBoardEventsOnCanel, SharedBoardEventsOnPause, SharedBoardEventsOnResume, SharedBoardEventsUserSwiped, SharedFalehFeel, SharedBoardState, SharedSoundState, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedKotlinArray<T>, SharedOrientation, SharedSoundType, SharedHomeEvents, SharedHomeEventsGetLevel, SharedHomeState, SharedKotlinThrowable, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKbsonBsonValueCompanion, SharedKbsonBsonValue, SharedKbsonBsonBinary, SharedKbsonBsonBoolean, SharedKbsonBsonMaxKey, SharedKbsonBsonMinKey, SharedKbsonBsonNull, SharedKbsonBsonUndefined, SharedKbsonBsonDBPointer, SharedKbsonBsonDateTime, SharedKbsonBsonDecimal128, SharedKbsonBsonDouble, SharedKbsonBsonInt32, SharedKbsonBsonInt64, SharedKbsonBsonJavaScript, SharedKbsonBsonJavaScriptWithScope, SharedKbsonBsonNumber, SharedKbsonBsonRegularExpression, SharedKbsonBsonString, SharedKbsonBsonSymbol, SharedKbsonBsonTimestamp, SharedKbsonBsonType, SharedKbsonBsonObjectIdCompanion, SharedKotlinByteArray, SharedKotlinAbstractCoroutineContextElement, SharedKotlinx_coroutines_coreCoroutineDispatcherKey, SharedKbsonBsonBinarySubType, SharedKbsonBsonBinaryCompanion, SharedKbsonBsonBooleanCompanion, SharedKbsonBsonDBPointerCompanion, SharedKbsonBsonDateTimeCompanion, SharedKbsonBsonDecimal128Companion, SharedKbsonBsonDoubleCompanion, SharedKbsonBsonInt32Companion, SharedKbsonBsonInt64Companion, SharedKbsonBsonJavaScriptCompanion, SharedKbsonBsonJavaScriptWithScopeCompanion, SharedKbsonBsonRegularExpressionCompanion, SharedKbsonBsonStringCompanion, SharedKbsonBsonSymbolCompanion, SharedKbsonBsonTimestampCompanion, SharedKotlinByteIterator, SharedKotlinAbstractCoroutineContextKey<B, E>, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinNothing;
+@class SharedWordLocal, SharedWord, SharedUserLevelLocalCompanion, SharedKbsonBsonObjectId, SharedUserLevelMapper, SharedUserLevel, SharedUserLevelLocal, SharedWordMapper, SharedKotlinx_coroutines_coreCoroutineDispatcher, SharedCommonFlow<T>, SharedCommonStateFlow<T>, SharedCommonMutableStateFlow<T>, SharedKotlinMPPLogger, SharedLetter, SharedBoardEvents, SharedBoardEventsGameStarted, SharedBoardEventsLetterSwiped, SharedBoardEventsOnCanel, SharedBoardEventsOnPause, SharedBoardEventsOnResume, SharedBoardEventsUserSwiped, SharedFalehFeel, SharedBoardState, SharedSoundState, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedKotlinArray<T>, SharedOrientation, SharedSoundType, SharedHomeEvents, SharedHomeEventsDisableTutorial, SharedHomeEventsGetLevel, SharedHomeState, SharedKotlinThrowable, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKbsonBsonValueCompanion, SharedKbsonBsonValue, SharedKbsonBsonBinary, SharedKbsonBsonBoolean, SharedKbsonBsonMaxKey, SharedKbsonBsonMinKey, SharedKbsonBsonNull, SharedKbsonBsonUndefined, SharedKbsonBsonDBPointer, SharedKbsonBsonDateTime, SharedKbsonBsonDecimal128, SharedKbsonBsonDouble, SharedKbsonBsonInt32, SharedKbsonBsonInt64, SharedKbsonBsonJavaScript, SharedKbsonBsonJavaScriptWithScope, SharedKbsonBsonNumber, SharedKbsonBsonRegularExpression, SharedKbsonBsonString, SharedKbsonBsonSymbol, SharedKbsonBsonTimestamp, SharedKbsonBsonType, SharedKbsonBsonObjectIdCompanion, SharedKotlinByteArray, SharedKotlinAbstractCoroutineContextElement, SharedKotlinx_coroutines_coreCoroutineDispatcherKey, SharedKbsonBsonBinarySubType, SharedKbsonBsonBinaryCompanion, SharedKbsonBsonBooleanCompanion, SharedKbsonBsonDBPointerCompanion, SharedKbsonBsonDateTimeCompanion, SharedKbsonBsonDecimal128Companion, SharedKbsonBsonDoubleCompanion, SharedKbsonBsonInt32Companion, SharedKbsonBsonInt64Companion, SharedKbsonBsonJavaScriptCompanion, SharedKbsonBsonJavaScriptWithScopeCompanion, SharedKbsonBsonRegularExpressionCompanion, SharedKbsonBsonStringCompanion, SharedKbsonBsonSymbolCompanion, SharedKbsonBsonTimestampCompanion, SharedKotlinByteIterator, SharedKotlinAbstractCoroutineContextKey<B, E>, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinNothing;
 
 @protocol SharedKotlinx_coroutines_coreFlow, SharedMainRepository, SharedLibrary_baseDeleteable, SharedLibrary_baseBaseRealmObject, SharedLibrary_baseTypedRealmObject, SharedLibrary_baseRealmObject, SharedKotlinx_coroutines_coreFlowCollector, SharedDisposableHandle, SharedKotlinx_coroutines_coreCoroutineScope, SharedKotlinx_coroutines_coreSharedFlow, SharedKotlinx_coroutines_coreStateFlow, SharedKotlinx_coroutines_coreMutableSharedFlow, SharedKotlinx_coroutines_coreMutableStateFlow, SharedKotlinx_coroutines_coreDisposableHandle, SharedKotlinComparable, SharedKotlinCoroutineContext, SharedKotlinCoroutineContextKey, SharedKotlinCoroutineContextElement, SharedKotlinContinuation, SharedKotlinContinuationInterceptor, SharedKotlinx_coroutines_coreRunnable, SharedKotlinIterator, SharedKotlinx_serialization_coreKSerializer, SharedKotlinx_serialization_coreEncoder, SharedKotlinx_serialization_coreSerialDescriptor, SharedKotlinx_serialization_coreSerializationStrategy, SharedKotlinx_serialization_coreDecoder, SharedKotlinx_serialization_coreDeserializationStrategy, SharedKotlinx_serialization_coreCompositeEncoder, SharedKotlinAnnotation, SharedKotlinx_serialization_coreCompositeDecoder, SharedKotlinx_serialization_coreSerializersModuleCollector, SharedKotlinKClass, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier;
 
@@ -155,6 +155,12 @@ __attribute__((swift_name("LocalDataStore")))
  * Other uncaught Kotlin exceptions are fatal.
 */
 - (void)addXpXp:(int32_t)xp completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("addXp(xp:completionHandler:)")));
+
+/**
+ * @note This method converts instances of CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)disableTutorialWithCompletionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("disableTutorial(completionHandler:)")));
 - (NSArray<SharedWordLocal *> *)generateNewWordsNum:(int32_t)num __attribute__((swift_name("generateNewWords(num:)")));
 - (id<SharedKotlinx_coroutines_coreFlow>)getLevel __attribute__((swift_name("getLevel()")));
 - (BOOL)isContainedWord:(NSString *)word __attribute__((swift_name("isContained(word:)")));
@@ -169,6 +175,12 @@ __attribute__((swift_name("MainRepository")))
  * Other uncaught Kotlin exceptions are fatal.
 */
 - (void)addXPStars:(int32_t)stars completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("addXP(stars:completionHandler:)")));
+
+/**
+ * @note This method converts instances of CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)disableTutorialWithCompletionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("disableTutorial(completionHandler:)")));
 - (NSArray<SharedWord *> *)generateNewWordsNum:(int32_t)num __attribute__((swift_name("generateNewWords(num:)")));
 - (id<SharedKotlinx_coroutines_coreFlow>)getUserLevel __attribute__((swift_name("getUserLevel()")));
 - (BOOL)isContainedWord:(NSString *)word __attribute__((swift_name("isContained(word:)")));
@@ -185,6 +197,12 @@ __attribute__((swift_name("MainRepositoryImp")))
  * Other uncaught Kotlin exceptions are fatal.
 */
 - (void)addXPStars:(int32_t)stars completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("addXP(stars:completionHandler:)")));
+
+/**
+ * @note This method converts instances of CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)disableTutorialWithCompletionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("disableTutorial(completionHandler:)")));
 - (NSArray<SharedWord *> *)generateNewWordsNum:(int32_t)num __attribute__((swift_name("generateNewWords(num:)")));
 - (id<SharedKotlinx_coroutines_coreFlow>)getUserLevel __attribute__((swift_name("getUserLevel()")));
 - (BOOL)isContainedWord:(NSString *)word __attribute__((swift_name("isContained(word:)")));
@@ -220,6 +238,7 @@ __attribute__((swift_name("UserLevelLocal")))
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property SharedKbsonBsonObjectId *id __attribute__((swift_name("id")));
+@property BOOL isFirstTime __attribute__((swift_name("isFirstTime")));
 @property int32_t level __attribute__((swift_name("level")));
 @property int32_t xp __attribute__((swift_name("xp")));
 @end
@@ -598,6 +617,18 @@ __attribute__((swift_name("HomeEvents")))
 @end
 
 __attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("HomeEvents.DisableTutorial")))
+@interface SharedHomeEventsDisableTutorial : SharedHomeEvents
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)disableTutorial __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedHomeEventsDisableTutorial *shared __attribute__((swift_name("shared")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@end
+
+__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("HomeEvents.GetLevel")))
 @interface SharedHomeEventsGetLevel : SharedHomeEvents
 + (instancetype)alloc __attribute__((unavailable));
@@ -647,11 +678,12 @@ __attribute__((swift_name("Letter")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UserLevel")))
 @interface SharedUserLevel : SharedBase
-- (instancetype)initWithLevel:(int32_t)level xp:(float)xp __attribute__((swift_name("init(level:xp:)"))) __attribute__((objc_designated_initializer));
-- (SharedUserLevel *)doCopyLevel:(int32_t)level xp:(float)xp __attribute__((swift_name("doCopy(level:xp:)")));
+- (instancetype)initWithLevel:(int32_t)level xp:(float)xp isFirstTime:(BOOL)isFirstTime __attribute__((swift_name("init(level:xp:isFirstTime:)"))) __attribute__((objc_designated_initializer));
+- (SharedUserLevel *)doCopyLevel:(int32_t)level xp:(float)xp isFirstTime:(BOOL)isFirstTime __attribute__((swift_name("doCopy(level:xp:isFirstTime:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
+@property BOOL isFirstTime __attribute__((swift_name("isFirstTime")));
 @property (readonly) int32_t level __attribute__((swift_name("level")));
 @property (readonly) float xp __attribute__((swift_name("xp")));
 @end

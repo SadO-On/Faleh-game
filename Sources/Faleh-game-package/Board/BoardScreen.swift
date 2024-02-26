@@ -16,9 +16,11 @@ struct BoardScreen: View {
     @EnvironmentObject var pilot: UIPilot<AppRoute>
 
     @State var isPause: Bool = false
+    @State var isFirstTime: Bool
 
-    init() {
+    init(isFirstTime: Bool) {
         viewModel = IOSBoardViewModel()
+        self.isFirstTime = isFirstTime
     }
 
     private var fourColumnGrid = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
@@ -80,6 +82,14 @@ struct BoardScreen: View {
                     pilot.popTo(.Home)
                 })
             }
+            if isFirstTime {
+                TutorialScreen(onDone: {
+                    isFirstTime = false
+                    viewModel.onEevent(event: BoardEvents.OnResume())
+                }).onAppear(perform: {
+                    viewModel.onEevent(event: BoardEvents.OnPause())
+                })
+            }
         }.navigationBarHidden(true)
             .navigationBarTitle("")
             .onAppear {
@@ -119,5 +129,5 @@ struct BoardScreen: View {
 }
 
 #Preview {
-    BoardScreen()
+    BoardScreen(isFirstTime: true)
 }

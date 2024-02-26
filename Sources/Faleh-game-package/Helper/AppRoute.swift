@@ -11,6 +11,6 @@ import Foundation
 
 enum AppRoute: Equatable {
     case Home
-    case Board
+    case Board(isFirstTime: Bool)
     case Result(stars: Int, list: [String])
 }
