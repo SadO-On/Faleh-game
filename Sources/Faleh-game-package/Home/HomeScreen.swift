@@ -16,10 +16,13 @@ struct HomeScreen: View {
     @Environment(\.openURL) var openURL
 
     @State private var scales: [CGFloat]
-
-    init() {
+    
+    let onBackClicked: ()-> Void
+    
+    init(onBackClicked: @escaping ()->Void) {
         _scales = State(initialValue: Array(repeating: 0, count: 4))
         viewModel = IOSHomeViewModel()
+        self.onBackClicked = onBackClicked
     }
 
     var body: some View {
@@ -29,7 +32,7 @@ struct HomeScreen: View {
             VStack {
                 HStack(alignment: .top) {
                     Button(action: {
-                        pilot.pop()
+                        onBackClicked()
                     }, label: {
                         Image("back_btn", bundle: .module)
                     }).padding()
@@ -86,7 +89,7 @@ struct HomeScreen: View {
 }
 
 #Preview {
-    HomeScreen()
+    HomeScreen(onBackClicked: {})
 }
 
 
