@@ -49,6 +49,7 @@ struct SoundManager {
             let player = try AVAudioPlayer(contentsOf: url)
             player.prepareToPlay()
         } catch {
+            print("Failed to play sound: \(error)")
         }
     }
 
