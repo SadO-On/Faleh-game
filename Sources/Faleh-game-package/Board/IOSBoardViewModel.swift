@@ -19,7 +19,7 @@ extension BoardScreen {
         private var soundHandle: DisposableHandle?
 
         init() {
-            viewModel = BoardViewModel(coroutineScope: nil)
+            viewModel = BoardViewModel(coroutineScope: nil, context: NSObject())
         }
 
         func onEevent(event: BoardEvents) {

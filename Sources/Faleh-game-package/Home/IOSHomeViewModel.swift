@@ -18,7 +18,7 @@ extension HomeScreen {
         private var handle: DisposableHandle?
 
         init() {
-            viewModel = HomeViewModel(courotineScope: nil)
+            viewModel = HomeViewModel(courotineScope: nil, context: NSObject())
         }
 
         func onEevent(event: HomeEvents) {
