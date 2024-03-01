@@ -36,20 +36,25 @@ struct PrimaryButtonWidget: View {
     }
 }
 
-var audioPlayer: AVAudioPlayer!
+private var player: AVAudioPlayer?
 
 struct SoundManager {
     static let shared = SoundManager()
 
     func intit() {
-        let sound =  Bundle.module.path(forResource: "click", ofType: "wav")
-        audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
-        audioPlayer.prepareToPlay()
+        guard let url = Bundle.module.url(forResource: "click", withExtension: "wav") else { return
+        }
+
+        do {
+            let player = try AVAudioPlayer(contentsOf: url)
+            player.prepareToPlay()
+        } catch {
+        }
     }
 
     func play() {
         DispatchQueue.main.async {
-            audioPlayer.play()
+            player?.play()
         }
     }
 }
