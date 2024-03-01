@@ -21,9 +21,10 @@ public struct GameStartView: View {
                 case.Board(let isFirstTime): BoardScreen(isFirstTime: isFirstTime)
                 case.Result(let stars, let list): ResultScreen(isWin: stars != 0, starsCount: stars, list: list)
                 }
-            }.ignoresSafeArea(.all).onAppear {
-                SoundManager.shared.intit()
-            }
+            }.ignoresSafeArea(.all)
+//            .onAppear {
+//                SoundManager.shared
+//            }
    
       
     }
