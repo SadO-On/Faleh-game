@@ -150,7 +150,6 @@ __attribute__((swift_name("LocalDataStore")))
 - (instancetype)initWithContext:(NSObject *)context __attribute__((swift_name("init(context:)"))) __attribute__((objc_designated_initializer));
 - (void)addLevelLevel:(int32_t)level __attribute__((swift_name("addLevel(level:)")));
 - (void)addXpXp:(int32_t)xp __attribute__((swift_name("addXp(xp:)")));
-- (void)disableTutorial __attribute__((swift_name("disableTutorial()")));
 - (NSArray<SharedWordLocal *> *)generateNewWordsNum:(int32_t)num __attribute__((swift_name("generateNewWords(num:)")));
 - (int32_t)getLevel __attribute__((swift_name("getLevel()")));
 - (int32_t)getXP __attribute__((swift_name("getXP()")));
@@ -160,12 +159,7 @@ __attribute__((swift_name("LocalDataStore")))
 __attribute__((swift_name("MainRepository")))
 @protocol SharedMainRepository
 @required
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)addXPStars:(int32_t)stars completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("addXP(stars:completionHandler:)")));
+- (void)addXPStars:(int32_t)stars __attribute__((swift_name("addXP(stars:)")));
 - (NSArray<SharedWord *> *)generateNewWordsNum:(int32_t)num __attribute__((swift_name("generateNewWords(num:)")));
 - (SharedUserLevel *)getUserLevel __attribute__((swift_name("getUserLevel()")));
 - (BOOL)isContainedWord:(NSString *)word __attribute__((swift_name("isContained(word:)")));
@@ -175,12 +169,7 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("MainRepositoryImp")))
 @interface SharedMainRepositoryImp : SharedBase <SharedMainRepository>
 - (instancetype)initWithContext:(NSObject *)context __attribute__((swift_name("init(context:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)addXPStars:(int32_t)stars completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("addXP(stars:completionHandler:)")));
+- (void)addXPStars:(int32_t)stars __attribute__((swift_name("addXP(stars:)")));
 - (NSArray<SharedWord *> *)generateNewWordsNum:(int32_t)num __attribute__((swift_name("generateNewWords(num:)")));
 - (SharedUserLevel *)getUserLevel __attribute__((swift_name("getUserLevel()")));
 - (BOOL)isContainedWord:(NSString *)word __attribute__((swift_name("isContained(word:)")));
