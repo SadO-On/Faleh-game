@@ -8,7 +8,7 @@
 import Foundation
 import AVFoundation
 
-class SoundManagerV2: NSObject {
+class SoundManagerV2 : NSObject {
 
     static let shared = SoundManagerV2()
 
@@ -18,7 +18,7 @@ class SoundManagerV2: NSObject {
     }
 
     private let serialQueue = DispatchQueue(label: "SoundQueue", qos: .userInitiated)
-    private var players: [AVAudioPlayer] = []
+    private var currentPlayer: AVAudioPlayer?
 
     static func play(_ sound: String) {
         shared.play(sound)
@@ -29,10 +29,15 @@ class SoundManagerV2: NSObject {
 
         serialQueue.async {
             do {
+                // Stop the currently playing player, if any
+                self.currentPlayer?.stop()
+
                 let player = try AVAudioPlayer(contentsOf: url)
                 player.delegate = self
                 player.prepareToPlay()
-                self.players.append(player)
+
+                // Set the new player as the current player
+                self.currentPlayer = player
 
                 // Since playing does not update the UI, it's okay to do it on the serial queue
                 player.play()
@@ -41,15 +46,13 @@ class SoundManagerV2: NSObject {
             }
         }
     }
-    
-    
 }
 
 extension SoundManagerV2: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        // Remove the player from the array when it finishes playing
-        if let index = players.firstIndex(of: player) {
-            players.remove(at: index)
+        // Reset the current player when it finishes playing
+        if player == currentPlayer {
+            currentPlayer = nil
         }
     }
 }
