@@ -68,7 +68,6 @@ struct HomeScreen: View {
                 Spacer()
                 PrimaryButtonWidget(text: "العب", onClick: {
                     if viewModel.state.userLevel.isFirstTime {
-                        viewModel.onEevent(event: HomeEvents.DisableTutorial())
                         pilot.push(.Board(isFirstTime: true))
                     } else {
                         pilot.push(.Board(isFirstTime: false))

@@ -6,7 +6,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class NSObject, SharedWordLocal, SharedWord, SharedUserLevel, SharedWordMapper, SharedKotlinx_coroutines_coreCoroutineDispatcher, SharedCommonFlow<T>, SharedCommonStateFlow<T>, SharedCommonMutableStateFlow<T>, SharedLetter, SharedBoardEvents, SharedBoardEventsGameStarted, SharedBoardEventsLetterSwiped, SharedBoardEventsOnCanel, SharedBoardEventsOnPause, SharedBoardEventsOnResume, SharedBoardEventsUserSwiped, SharedFalehFeel, SharedBoardState, SharedSoundState, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedKotlinArray<T>, SharedOrientation, SharedSoundType, SharedHomeEvents, SharedHomeEventsDisableTutorial, SharedHomeEventsGetLevel, SharedHomeState, SharedKotlinThrowable, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinAbstractCoroutineContextElement, SharedKotlinx_coroutines_coreCoroutineDispatcherKey, SharedKotlinAbstractCoroutineContextKey<B, E>;
+@class NSObject, SharedWordLocal, SharedWord, SharedUserLevel, SharedWordMapper, SharedKotlinx_coroutines_coreCoroutineDispatcher, SharedCommonFlow<T>, SharedCommonStateFlow<T>, SharedCommonMutableStateFlow<T>, SharedLetter, SharedBoardEvents, SharedBoardEventsGameStarted, SharedBoardEventsLetterSwiped, SharedBoardEventsOnCanel, SharedBoardEventsOnPause, SharedBoardEventsOnResume, SharedBoardEventsUserSwiped, SharedFalehFeel, SharedBoardState, SharedSoundState, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedKotlinArray<T>, SharedOrientation, SharedSoundType, SharedHomeEvents, SharedHomeEventsGetLevel, SharedHomeState, SharedKotlinThrowable, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinAbstractCoroutineContextElement, SharedKotlinx_coroutines_coreCoroutineDispatcherKey, SharedKotlinAbstractCoroutineContextKey<B, E>;
 
 @protocol SharedMainRepository, SharedKotlinx_coroutines_coreFlowCollector, SharedKotlinx_coroutines_coreFlow, SharedDisposableHandle, SharedKotlinx_coroutines_coreCoroutineScope, SharedKotlinx_coroutines_coreSharedFlow, SharedKotlinx_coroutines_coreStateFlow, SharedKotlinx_coroutines_coreMutableSharedFlow, SharedKotlinx_coroutines_coreMutableStateFlow, SharedKotlinx_coroutines_coreDisposableHandle, SharedKotlinComparable, SharedKotlinCoroutineContext, SharedKotlinCoroutineContextKey, SharedKotlinCoroutineContextElement, SharedKotlinContinuation, SharedKotlinContinuationInterceptor, SharedKotlinx_coroutines_coreRunnable, SharedKotlinIterator;
 
@@ -166,12 +166,6 @@ __attribute__((swift_name("MainRepository")))
  * Other uncaught Kotlin exceptions are fatal.
 */
 - (void)addXPStars:(int32_t)stars completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("addXP(stars:completionHandler:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)disableTutorialWithCompletionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("disableTutorial(completionHandler:)")));
 - (NSArray<SharedWord *> *)generateNewWordsNum:(int32_t)num __attribute__((swift_name("generateNewWords(num:)")));
 - (SharedUserLevel *)getUserLevel __attribute__((swift_name("getUserLevel()")));
 - (BOOL)isContainedWord:(NSString *)word __attribute__((swift_name("isContained(word:)")));
@@ -187,12 +181,6 @@ __attribute__((swift_name("MainRepositoryImp")))
  * Other uncaught Kotlin exceptions are fatal.
 */
 - (void)addXPStars:(int32_t)stars completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("addXP(stars:completionHandler:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)disableTutorialWithCompletionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("disableTutorial(completionHandler:)")));
 - (NSArray<SharedWord *> *)generateNewWordsNum:(int32_t)num __attribute__((swift_name("generateNewWords(num:)")));
 - (SharedUserLevel *)getUserLevel __attribute__((swift_name("getUserLevel()")));
 - (BOOL)isContainedWord:(NSString *)word __attribute__((swift_name("isContained(word:)")));
@@ -538,18 +526,6 @@ __attribute__((swift_name("SoundType")))
 
 __attribute__((swift_name("HomeEvents")))
 @interface SharedHomeEvents : SharedBase
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("HomeEvents.DisableTutorial")))
-@interface SharedHomeEventsDisableTutorial : SharedHomeEvents
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)disableTutorial __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) SharedHomeEventsDisableTutorial *shared __attribute__((swift_name("shared")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
 @end
 
 __attribute__((objc_subclassing_restricted))
